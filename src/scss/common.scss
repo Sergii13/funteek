@@ -1,0 +1,79 @@
+// Заголовки, общие БЄМ блоки и проче...
+.change-img {
+   width: 100%;
+   max-width: 336px;
+   margin: 0 auto;
+   position: relative;
+   z-index: 2;
+}
+
+.change-img__wrap {
+   position: absolute;
+   top: 12px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 303px;
+   height: 656px;
+   -webkit-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   transition: all 0.3s;
+   overflow: hidden;
+   z-index: -1;
+   visibility: hidden;
+   border-radius: 20px;
+   opacity: 0;
+}
+
+.change-img__wrap.active {
+   opacity: 1;
+   visibility: visible;
+}
+
+.change-img__item {
+   height: 100%;
+   z-index: -1;
+   overflow: hidden;
+}
+
+.change-img__ramka {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.change-img__ramka img {
+   -o-object-fit: contain;
+   object-fit: contain;
+}
+.title {
+   font-weight: 500;
+   @include adaptiveValue("font-size", 34, 24);
+   line-height: math.div(40, 34);
+   letter-spacing: 0.01em;
+   color: #f3f4f7;
+   text-align: center;
+}
+.title-blue {
+   color: $blueColor;
+}
+.title-dark-blue {
+   color: $blueDarkColor;
+}
+.title-violet {
+   color: $violetColor;
+}
+.title-rose {
+   color: $roseColor;
+}
+.subtitle {
+   text-align: center;
+   font-weight: 500;
+   @include adaptiveValue("font-size", 20, 16);
+   line-height: math.div(24, 20);
+   letter-spacing: 0.01em;
+   max-width: rem(607);
+   margin: 0 auto;
+   @media (max-width: em(650)) {
+      font-size: rem(16);
+   }
+}

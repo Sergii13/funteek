@@ -1,0 +1,82 @@
+<div id="popup" aria-hidden="true" class="popup">
+   <div class="popup__wrapper">
+      <div class="popup__content">
+         <button aria-hidden="false" data-close class="popup__close-btn">
+            <img src="@img/svg/close.svg" alt="Image">
+         </button>
+         <div class="popup__title">Join the game</div>
+         <div data-tabs class="tabs">
+            <nav data-tabs-titles class="tabs__navigation">
+               <button type="submit" data-popupbg="blue" class="tabs__title _tab-active">Player</button>
+               <button type="submit" data-popupbg="rose" class="tabs__title">Director</button>
+            </nav>
+            <div data-tabs-body class="tabs__content">
+               <div class="tabs__body">
+                  <form action="#" class="tabs__form form">
+                     <div class="form__items">
+                        <div class="form__item">
+                           <label class="form__label">My TikTok account is</label>
+                           <input data-validate autocomplete="off" type="text" name="form[]"
+                              placeholder="Your tiktok account" class="input form__input">
+                        </div>
+                        <div class="form__item">
+                           <label class="form__label">Reach ma at</label>
+                           <input data-validate data-required="email" autocomplete="off" type="text" name="form[]"
+                              placeholder="Your@email.com" class="input form__input">
+                        </div>
+                     </div>
+                     <button data-popup="#popup2" class="form__button form__button_blue">
+                        I am ready to play
+                     </button>
+                  </form>
+               </div>
+               <div class="tabs__body">
+                  <form action="#" class="tabs__form form">
+                     <div class="form__items">
+                        <div class="form__item">
+                           <label class="form__label">Reach ma at</label>
+                           <input data-validate data-required="email" autocomplete="off" type="text" name="form[]"
+                              placeholder="Your@email.com" class="input form__input">
+                        </div>
+                        <div class="form__item">
+                           <label class="form__label">Let’s talk</label>
+                           <input data-validate autocomplete="off" type="text" name="form[]" placeholder="Your thoughts"
+                              class="input form__input">
+                        </div>
+                     </div>
+                     <button data-popup="#popup3" class="form__button form__button_rose">
+                        I am ready to play
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div id="popup2" aria-hidden="true" class="popup">
+   <div class="popup__wrapper">
+      <div class="popup__content">
+         <div class="popup__text">
+            Something cool is about to happen! <br>
+            We will send you the link when the game starts.
+         </div>
+         <button data-close class="popup__close play__button play__button-blue">
+            Cool
+         </button>
+      </div>
+   </div>
+</div>
+<div id="popup3" aria-hidden="true" class="popup">
+   <div class="popup__wrapper">
+      <div class="popup__content">
+         <div class="popup__text">
+            Something cool is about to happen! <br>
+            We will talk to you soon.
+         </div>
+         <button data-close class="popup__close play__button play__button-rose">
+            Cool
+         </button>
+      </div>
+   </div>
+</div>

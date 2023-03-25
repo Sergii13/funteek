@@ -1,0 +1,203 @@
+.top {
+   padding-top: rem(64);
+   padding-bottom: rem(92);
+   position: relative;
+   background: linear-gradient(180deg, rgba(13, 13, 13, 0.01) 26.6%, #0d0d0d 100%),
+      linear-gradient(180deg, rgba(13, 13, 13, 0.5) 0%, rgba(13, 13, 13, 0.01) 76.25%);
+   overflow: hidden;
+   @media (max-width: $mobile) {
+      padding-top: rem(72);
+   }
+   @media (max-width: em(1200)) {
+      padding-bottom: rem(264);
+   }
+   // .top__container
+   &__container {
+      position: relative;
+      z-index: 2;
+   }
+   &__grid-bg {
+      display: grid;
+      gap: rem(16);
+      overflow: hidden;
+      grid-template-columns: repeat(8, 180px);
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      max-height: rem(950);
+      align-items: flex-start;
+      top: 20px;
+      left: 0;
+      justify-content: center;
+      @media (max-width: $mobileSmall) {
+         top: rem(-30);
+         overflow: visible;
+         transform: translateX(60px);
+      }
+   }
+   &__column {
+      display: grid;
+      gap: rem(16);
+      width: rem(180);
+      &:nth-child(2) {
+         transform: translateY(100px);
+      }
+      &:nth-child(3) {
+         transform: translateY(40px);
+      }
+      &:nth-child(4) {
+         transform: translateY(113px);
+      }
+      &:nth-child(5) {
+         transform: translateY(24px);
+      }
+      &:nth-child(6) {
+         transform: translateY(-21px);
+      }
+      &:nth-child(7) {
+         transform: translateY(124px);
+      }
+      &:nth-child(8) {
+         transform: translateY(-14px);
+      }
+   }
+   // .top__title
+   &__title {
+      @include adaptiveValue("font-size", 204, 54);
+      line-height: math.div(243, 204);
+      font-weight: 900;
+      text-align: center;
+      text-shadow: 0px 4px 4px #0d0d0d;
+      letter-spacing: -0.01em;
+      color: #f3f4f7;
+      &:not(:last-child) {
+         margin-bottom: rem(32);
+      }
+   }
+   // .top__title-change
+   &__title-change {
+      display: block;
+      &:not(:last-child) {
+         margin-bottom: rem(16);
+      }
+   }
+   &__buttons {
+      @media (max-width: $mobileSmall) {
+         gap: rem(8);
+         flex-direction: column;
+         max-width: rem(285);
+         margin: 0 auto;
+      }
+   }
+   @media (max-width: $mobileSmall) {
+      .play__button {
+         width: 100%;
+      }
+   }
+   // .top__title-item
+   &__title-item {
+      display: none;
+      &.active {
+         display: block;
+      }
+   }
+   // .top__title-small
+   &__title-small {
+   }
+   // .top__text
+   &__text {
+      font-weight: 600;
+      @include adaptiveValue("font-size", 44, 28);
+      line-height: math.div(56, 44);
+      letter-spacing: 0.02em;
+      text-shadow: 0px 2px 2px #0d0d0d;
+      text-align: center;
+      max-width: rem(952);
+      margin: 0 auto rem(40);
+      @media (min-width: $mobileSmall) {
+         p {
+            display: inline;
+         }
+         margin: 0 auto rem(64);
+      }
+   }
+   // .top__text-blue
+   &__text-blue {
+      color: $blueColor;
+   }
+   // .top__text-blue-dark
+   &__text-blue-dark {
+      color: $blueDarkColor;
+   }
+   // .top__text-violet
+   &__text-violet {
+      color: $violetColor;
+   }
+   // .top__text-rose
+   &__text-rose {
+      color: $roseColor;
+   }
+   // .top__form
+   &__form {
+   }
+}
+.form-top {
+   // .form-top__row
+   &__row {
+      display: flex;
+      justify-content: center;
+      gap: rem(4);
+      &:not(:last-child) {
+         margin-bottom: rem(16);
+      }
+   }
+   // .form-top__input
+   &__input {
+      height: rem(48);
+      max-width: rem(205);
+      background: #181a1b;
+      border-radius: 10px;
+      border: none;
+      font-weight: 500;
+      letter-spacing: 0.005em;
+      color: #88898d;
+   }
+   // .form-top__bottom
+   &__bottom {
+      text-align: center;
+      font-size: rem(16);
+      line-height: math.div(22, 16);
+      letter-spacing: 0.003em;
+      color: #f3f4f7;
+      font-weight: 500;
+      margin: 0 auto;
+      max-width: rem(270);
+      a {
+         color: $blueDarkColor;
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+   &__button {
+      background: #1a1f31;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.005em;
+      font-weight: 500;
+      padding: rem(5) rem(20);
+      color: #88898d;
+      justify-content: center;
+      height: rem(48);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (any-hover: hover) {
+         &:hover {
+            color: #f3f4f6;
+            background-color: $blueDarkColor;
+         }
+      }
+   }
+}
